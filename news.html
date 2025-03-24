@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>新闻资讯 - 种子公司名称</title>
-    <link rel="stylesheet" href="./css/common.css" />
+    <!-- 移除不存在的common.css引用 -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- 可能需要引入其他CSS文件 -->
   </head>
   <body>
     <!-- 页头部分 -->
@@ -38,11 +37,7 @@
             <article class="news-item">
               <div class="news-date">2023-10-15</div>
               <h3 class="news-title">
-                <a
-                  href="#"
-                  class="news-list-title"
-                  data-id="1"
-                  onclick="showNewsDetail(1); return false;"
+                <a href="#" class="news-list-title" data-id="1"
                   >种子管理条例实施细则正式发布</a
                 >
               </h3>
@@ -54,17 +49,19 @@
               <div class="news-date">2023-09-28</div>
               <h3 class="news-title">
                 <a href="#" class="news-list-title" data-id="2"
+                  onclick="showNewsDetail(2); return false;"
                   >关于加强农作物种质资源保护的通知</a
                 >
               </h3>
               <p class="news-summary">
-                国务院发布关于加强农作物种质资源保护工作的通知，要求各地区积极建设种质资源库...
+                国务院发布关于加强农作物种质资源保护通知书，要求各地区积极建设种质资源库...
               </p>
             </article>
             <article class="news-item">
               <div class="news-date">2023-08-12</div>
               <h3 class="news-title">
                 <a href="#" class="news-list-title" data-id="3"
+                  onclick="showNewsDetail(3); return false;"
                   >种子行业质量标准更新</a
                 >
               </h3>
@@ -99,11 +96,11 @@
               <div class="news-date">2023-09-15</div>
               <h3 class="news-title">
                 <a href="#" class="news-list-title" data-id="5"
-                  >乡村振兴种子工程启动</a
+                  >振兴乡村种子工程启动</a
                 >
               </h3>
               <p class="news-summary">
-                乡村振兴种子工程正式启动，将为贫困地区提供优质种子和技术支持...
+                振兴乡村种子工程启动，将为贫困地区提供优质种子和技术支持...
               </p>
             </article>
             <article class="news-item">
@@ -189,7 +186,7 @@
     </div>
 
     <!-- JavaScript文件 -->
-    <script src="./js/common.js"></script>
+    <!-- 移除不存在的common.js引用 -->
     <script src="./js/news.js"></script>
   </body>
 </html>

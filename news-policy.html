@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>政策法规 - 新闻资讯 - 种子公司名称</title>
-    <link rel="stylesheet" href="./css/common.css" />
+    <!-- 注释掉不需要的引用 -->
+    <!-- 移除以下两行引用 -->
+    <!-- <link rel="stylesheet" href="./css/common.css"> -->
+    <!-- <script src="./js/common.js"></script> -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/news-list.css" />
   </head>
@@ -35,6 +38,7 @@
       </div>
 
       <!-- 新闻列表 -->
+      <!-- 修改新闻列表容器部分 -->
       <div class="news-list-container">
         <ul class="news-items">
           <li class="news-list-item">
@@ -98,15 +102,17 @@
             >
           </li>
         </ul>
-
-        <!-- 分页导航 -->
-        <div class="pagination">
-          <a href="#" class="page-item active">1</a>
-          <a href="#" class="page-item">2</a>
-          <a href="#" class="page-item">3</a>
-          <span class="page-item more">...</span>
-          <a href="#" class="page-item">10</a>
-          <a href="#" class="page-item next">下一页 &gt;</a>
+        
+        <!-- 新增分页容器包裹层 -->
+        <div class="pagination-container">
+          <div class="pagination">
+            <a href="#" class="page-item active">1</a>
+            <a href="#" class="page-item">2</a>
+            <a href="#" class="page-item">3</a>
+            <span class="page-item more">...</span>
+            <a href="#" class="page-item">10</a>
+            <a href="#" class="page-item next">下一页 &gt;</a>
+          </div>
         </div>
       </div>
     </main>
@@ -130,7 +136,7 @@
     </div>
 
     <!-- JavaScript文件 -->
-    <script src="./js/common.js"></script>
+    <!-- <script src="./js/common.js"></script> -->
     <script src="./js/news.js"></script>
   </body>
 </html>

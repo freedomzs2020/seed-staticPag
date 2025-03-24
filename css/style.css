@@ -1,4 +1,255 @@
-/* 已有的样式代码... */
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* 页面标题样式 */
+.page-title-container {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.title-underline {
+  width: 50px;
+  height: 3px;
+  background-color: #0d6832;
+  margin: 0 auto;
+  transition: width 0.3s;
+}
+
+.page-title-container:hover .title-underline {
+  width: 100px;
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #0d6832;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* 新闻列表容器 */
+.news-list-container {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 15px 70px;
+}
+
+.news-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 新闻列表项 */
+.news-list-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+}
+
+.news-list-item:hover {
+  background-color: #f9f9f9;
+}
+
+.news-list-item:last-child {
+  border-bottom: none;
+}
+
+.news-list-date {
+  min-width: 100px;
+  color: #888;
+  font-size: 14px;
+}
+
+.news-list-title {
+  flex: 1;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.news-list-title:hover {
+  color: #0d6832;
+}
+
+/* 分页控件 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  padding: 20px 0;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.page-item {
+  display: inline-block;
+  min-width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 5px;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.page-item:hover {
+  background-color: #e0e0e0;
+}
+
+.page-item.active {
+  background-color: #0d6832;
+  color: #fff;
+}
+
+.page-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #f0f0f0;
+}
+
+/* 模态框样式 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.modal h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  padding-right: 40px;
+}
+
+.news-meta {
+  margin: 10px 0 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.news-meta span {
+  margin-right: 20px;
+}
+
+.modal-body {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  line-height: 1.8;
+}
+
+/* 滚动条样式 */
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* 动画效果 */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content {
+  animation: modalFadeIn 0.3s;
+}
 
 /* 新闻资讯页面样式 */
 .news-container {
@@ -117,21 +368,4 @@
   .news-column {
     flex: 0 0 100%;
   }
-}
-
-/* 添加标题悬停效果 */
-.page-title-container {
-  position: relative;
-}
-
-.title-underline {
-  height: 3px;
-  width: 50px;
-  background-color: #0d6832;
-  margin: 10px auto 30px;
-  transition: width 0.3s ease;
-}
-
-.page-title-container:hover .title-underline {
-  width: 100px;
 }
