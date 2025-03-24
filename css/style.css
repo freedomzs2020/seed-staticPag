@@ -1,0 +1,137 @@
+/* 已有的样式代码... */
+
+/* 新闻资讯页面样式 */
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.news-column {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s;
+}
+
+.news-column:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-column.animated {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.column-header {
+  padding: 15px;
+  background-color: #0d6832; /* 假设项目中使用的主题绿色 */
+  color: #fff;
+  text-align: center;
+}
+
+.column-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.news-list {
+  padding: 15px;
+}
+
+.news-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.news-title {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.news-title a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.news-title a:hover {
+  color: #0d6832; /* 主题绿色 */
+}
+
+.news-summary {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.more-link {
+  text-align: right;
+  padding: 10px 15px;
+}
+
+.more-link a {
+  color: #0d6832; /* 主题绿色 */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.more-link a:hover {
+  text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 992px) {
+  .news-column {
+    flex: 0 0 calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-column {
+    flex: 0 0 100%;
+  }
+}
+
+/* 添加标题悬停效果 */
+.page-title-container {
+  position: relative;
+}
+
+.title-underline {
+  height: 3px;
+  width: 50px;
+  background-color: #0d6832;
+  margin: 10px auto 30px;
+  transition: width 0.3s ease;
+}
+
+.page-title-container:hover .title-underline {
+  width: 100px;
+}

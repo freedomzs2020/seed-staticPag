@@ -1,0 +1,235 @@
+/* 新闻列表页面样式 */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #0d6832;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.news-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px 70px;
+}
+
+.news-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+.news-list-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: calc(var(--item-index) * 0.05s);
+  opacity: 0;
+}
+
+.news-list-item:hover {
+  background-color: #f9f9f9;
+}
+
+.news-list-item:last-child {
+  border-bottom: none;
+}
+
+.news-list-date {
+  min-width: 100px;
+  color: #888;
+  font-size: 14px;
+}
+
+.news-list-title {
+  flex: 1;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.news-list-title:hover {
+  color: #0d6832;
+}
+
+/* 优化分页控件位置 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  padding: 20px 0;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.page-item {
+  display: inline-block;
+  min-width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 5px;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.page-item:hover {
+  background-color: #e0e0e0;
+}
+
+.page-item.active {
+  background-color: #0d6832;
+  color: #fff;
+}
+
+.page-item.more {
+  background-color: transparent;
+  cursor: default;
+}
+
+.page-item.prev,
+.page-item.next {
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+/* 添加禁用分页按钮样式 */
+.page-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #f0f0f0;
+}
+
+/* 模态弹窗样式 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 85vh;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s;
+  overflow: hidden;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.news-meta {
+  margin: 10px 0 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.news-meta span {
+  margin-right: 20px;
+}
+
+.modal-body {
+  line-height: 1.8;
+  color: #333;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.modal-body p {
+  margin-bottom: 15px;
+}
+
+/* 美化滚动条样式 */
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* 加载动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
